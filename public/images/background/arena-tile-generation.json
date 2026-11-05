@@ -1,0 +1,10 @@
+{
+  "mode": "built-in imagegen edit",
+  "reference": "User-supplied blue beveled diamond background",
+  "prompt": "Edit the supplied blue beveled diamond background into a high-resolution, perfectly seamless repeating square texture tile for a website background. Faithfully preserve the reference's exact appearance: flat top-down blue painted diamond panels, medium royal blue base, subtly darker inset diamond faces, very thin dark navy recessed bevel seams with slight light blue highlights, clean smooth surfaces. Do not redesign it, add grain, add objects, text, logos, lighting gradients, perspective, or vignette. The square tile should contain a centered dark blue diamond with corners exactly at the four edge midpoints, with the lighter blue corner triangles joining neighboring tiles into matching diamonds. Opposite edges must match exactly in color, seam positions, and shading so the tile can repeat in both directions with no visible join. Use a crisp large 2048 by 2048 square output if available. This is a faithful texture cleanup and upscale, not an illustration.",
+  "preparation": "Aligned the generated quarter tile, mirrored it across both axes for continuous geometry, resized to 2048 x 2048, and compressed as WebP at quality 90.",
+  "file": "arena-tile-2048.webp",
+  "width": 2048,
+  "height": 2048,
+  "cssTileSize": 160
+}

@@ -1,0 +1,37 @@
+:root {
+  --font-display: var(--font-supercell), "Arial Black", sans-serif;
+  color-scheme: dark;
+  font-family: var(--font-display);
+  font-synthesis: none;
+  background: #185b91;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100svh;
+  background: #185b91 url("../../public/images/background/arena-tile-2048.webp") repeat;
+  background-size: 160px 160px;
+  background-position: 0 0;
+  background-attachment: fixed;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #fff1ab;
+  outline-offset: 5px;
+}
+
+::selection {
+  background: #f1c96a;
+  color: #30271c;
+}

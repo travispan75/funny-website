@@ -1,0 +1,606 @@
+﻿.page {
+  --glass-surface: linear-gradient(145deg, #ffffff40, #ffffff1c);
+  --control-height: 82px;
+
+  display: flex;
+  width: min(100%, 1120px);
+  min-height: 100svh;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(12px, 2.4svh, 22px);
+  margin: 0 auto;
+  padding: clamp(14px, 3svh, 30px) 32px;
+}
+
+.profile {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.banner,
+.link {
+  border: 1px solid #ffffff75;
+  border-radius: 7px;
+  background: var(--glass-surface);
+  box-shadow: none;
+  backdrop-filter: blur(6px);
+}
+
+.banner {
+  display: grid;
+  min-width: 0;
+  height: var(--control-height);
+  min-height: var(--control-height);
+  flex: 1;
+  grid-template-columns: 74px minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+}
+
+.sigil {
+  display: block;
+  width: 74px;
+  height: 90px;
+  margin: -15px 0;
+}
+
+.identity,
+.academic > div {
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  color: #fff9ed;
+  font-size: clamp(21px, 2.2vw, 27px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.4px;
+  text-shadow: 0 2px 0 #102e4e;
+}
+
+.school {
+  margin: 5px 0 0;
+  color: #d9e9f6;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.academic {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 11px;
+}
+
+.academic > svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: #f4d894;
+}
+
+.degree {
+  margin: 0;
+  color: #f3ebcf;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.graduation {
+  margin: 7px 0 0;
+  color: #bcd3e5;
+  font-size: 9px;
+  line-height: 1.65;
+}
+
+.links {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.link {
+  position: relative;
+  display: inline-flex;
+  width: var(--control-height);
+  height: var(--control-height);
+  flex: 0 0 var(--control-height);
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: filter 140ms;
+}
+
+.link svg {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 1px #00000050);
+}
+
+.link:hover,
+.link:focus-visible {
+  filter: brightness(1.15);
+}
+
+.link::after {
+  position: absolute;
+  top: calc(100% + 9px);
+  left: 50%;
+  z-index: 2;
+  padding: 5px 8px;
+  border: 1px solid #ffffff40;
+  border-radius: 5px;
+  background: #121820e8;
+  color: #fff;
+  font-size: 9px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition: opacity 120ms, visibility 120ms;
+  content: attr(data-label);
+}
+
+.link:hover::after,
+.link:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.deck {
+  padding: clamp(12px, 2svh, 18px);
+  border: 2px solid #49301e;
+  border-bottom-width: 6px;
+  border-radius: 13px;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 48px, #5736190d 49px, #ffe2b00d 51px, transparent 53px),
+    linear-gradient(100deg, #ab8257, #bf9565 50%, #ad8151);
+  box-shadow: inset 0 2px 0 #efd1a1, inset 0 -2px 0 #7a5230, 0 7px 0 -3px #0a3351, 0 16px 32px #082a4933;
+}
+
+.deckHeading {
+  margin: 0 0 14px;
+  color: #fff9ed;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+  text-shadow: 0 3px 0 #4e3523, 1px 0 #4e3523, -1px 0 #4e3523, 0 -1px #4e3523;
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.entry {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 195px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  padding: clamp(10px, 1.8svh, 16px) 16px;
+  border: 1px solid #684c32;
+  border-bottom: 3px solid #705237;
+  border-radius: 8px;
+  background: linear-gradient(110deg, #fff8ea, #f2e5cd);
+  box-shadow: inset 0 1px 0 #fffdf5, 0 1px 2px #67482b40;
+}
+
+.employer {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 11px;
+}
+
+.company {
+  min-width: 0;
+  margin: 0;
+  color: #3c2f24;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.15px;
+  overflow-wrap: break-word;
+}
+
+.companyLogo {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.work {
+  min-width: 0;
+}
+
+.jobRole {
+  margin: 0 0 5px;
+  color: #493722;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.summary {
+  margin: 0;
+  color: #746047;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.dates {
+  color: #80694e;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 1000px) {
+  .page {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .banner {
+    grid-template-columns: 54px minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .sigil {
+    width: 54px;
+    height: 66px;
+    margin: 0;
+  }
+
+  .name {
+    font-size: clamp(16px, 2.2vw, 22px);
+  }
+
+  .school,
+  .degree {
+    font-size: clamp(7.5px, 0.95vw, 9px);
+  }
+
+  .graduation {
+    margin-top: 4px;
+    font-size: 7.5px;
+  }
+
+  .academic {
+    gap: 6px;
+  }
+
+  .academic > svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .links {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    gap: 16px;
+    padding: 24px 20px;
+  }
+
+  .banner {
+    height: auto;
+    min-height: 110px;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 10px 12px;
+    padding: 14px;
+  }
+
+  .sigil {
+    width: 54px;
+    height: 66px;
+    margin: -8px 0;
+  }
+
+  .name {
+    font-size: 23px;
+  }
+
+  .school {
+    font-size: 10px;
+  }
+
+  .academic {
+    grid-column: 1 / -1;
+    gap: 9px;
+  }
+
+  .academic > svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, 48px);
+    gap: 10px;
+  }
+
+  .link {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+    padding: 8px;
+  }
+
+  .entry {
+    grid-template-columns: 155px minmax(0, 1fr);
+    gap: 5px 18px;
+    padding: 13px 15px;
+  }
+
+  .employer {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .company {
+    font-size: 12px;
+  }
+
+  .work {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  .dates {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 9px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 540px) {
+  .page {
+    gap: 14px;
+    padding: 20px 16px;
+  }
+
+  .profile {
+    gap: 10px;
+  }
+
+  .banner {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 9px 8px;
+    padding: 12px;
+  }
+
+  .sigil {
+    width: 42px;
+    height: 51px;
+    margin: -4px 0;
+  }
+
+  .name {
+    font-size: 19px;
+  }
+
+  .school {
+    margin-top: 4px;
+    font-size: 8px;
+  }
+
+  .degree {
+    font-size: 9px;
+  }
+
+  .graduation {
+    margin-top: 5px;
+    font-size: 8px;
+  }
+
+  .academic > svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .links {
+    grid-template-columns: repeat(2, 44px);
+    gap: 8px;
+  }
+
+  .link {
+    width: 44px;
+    height: 44px;
+    padding: 7px;
+  }
+
+  .link svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .deck {
+    padding: 14px 12px;
+    border-radius: 11px;
+  }
+
+  .deckHeading {
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+
+  .entries {
+    gap: 7px;
+  }
+
+  .entry {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 8px;
+    padding: 10px 12px;
+  }
+
+  .employer {
+    grid-column: 1;
+    grid-row: 1;
+    gap: 8px;
+  }
+
+  .company {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .companyLogo {
+    width: 24px;
+    height: 24px;
+    flex-basis: 24px;
+  }
+
+  .dates {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 8px;
+    text-align: right;
+  }
+
+  .work {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .jobRole {
+    margin-bottom: 4px;
+    font-size: 10px;
+  }
+
+  .summary {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 350px) {
+  .page {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .profile {
+    gap: 8px;
+  }
+
+  .banner {
+    grid-template-columns: 30px minmax(0, 1fr);
+    padding: 10px;
+  }
+
+  .sigil {
+    width: 36px;
+    height: 44px;
+    margin: -3px 0;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .school {
+    font-size: 7.5px;
+  }
+
+  .degree {
+    font-size: 8px;
+  }
+
+  .graduation {
+    font-size: 7.5px;
+  }
+
+  .academic > svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .links {
+    grid-template-columns: repeat(2, 40px);
+  }
+
+  .link {
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+  }
+
+  .company {
+    font-size: 10px;
+  }
+
+  .dates {
+    font-size: 7.5px;
+  }
+}
+
+@media (min-width: 761px) and (max-height: 640px) {
+  .page {
+    gap: 12px;
+    padding: 12px 24px;
+  }
+
+  .banner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .name {
+    font-size: 23px;
+  }
+
+  .deck {
+    padding: 12px;
+  }
+
+  .deckHeading {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .entry {
+    padding: 9px 14px;
+  }
+
+  .jobRole {
+    font-size: 10px;
+  }
+
+  .summary {
+    font-size: 9px;
+    line-height: 1.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link,
+  .link::after {
+    transition: none;
+  }
+}
