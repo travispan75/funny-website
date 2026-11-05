@@ -408,6 +408,15 @@
   }
 }
 
+@media (min-width: 541px) and (max-width: 760px) {
+  .links {
+    align-self: stretch;
+    grid-template-rows: repeat(2, 48px);
+    align-content: space-between;
+    row-gap: 0;
+  }
+}
+
 @media (max-width: 540px) {
   .page {
     gap: 14px;
