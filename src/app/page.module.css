@@ -74,7 +74,7 @@
 .name {
   margin: 0;
   color: #fff9ed;
-  font-size: clamp(22.05px, 2.31vw, 28.35px);
+  font-size: clamp(24.255px, 2.541vw, 31.185px);
   font-weight: 400;
   line-height: 1.3;
   letter-spacing: 0.4px;
@@ -84,7 +84,7 @@
 .school {
   margin: 5px 0 0;
   color: #d9e9f6;
-  font-size: 10.5px;
+  font-size: 11.55px;
   font-weight: 400;
   line-height: 1.7;
 }
@@ -106,14 +106,14 @@
 .degree {
   margin: 0;
   color: #f3ebcf;
-  font-size: 10.5px;
+  font-size: 11.55px;
   line-height: 1.8;
 }
 
 .graduation {
   margin: 7px 0 0;
   color: #bcd3e5;
-  font-size: 9.45px;
+  font-size: 10.395px;
   line-height: 1.65;
 }
 
@@ -160,7 +160,7 @@
   border-radius: 5px;
   background: #121820e8;
   color: #fff;
-  font-size: 9.45px;
+  font-size: 10.395px;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
@@ -182,15 +182,18 @@
   border-bottom-width: 6px;
   border-radius: 13px;
   background:
-    repeating-linear-gradient(0deg, transparent 0 48px, #5736190d 49px, #ffe2b00d 51px, transparent 53px),
+    repeating-radial-gradient(ellipse at 18% 30%, transparent 0 15px, #633c1d10 16px, transparent 18px 37px) 0 0 / 100% 96px,
+    repeating-linear-gradient(0deg, transparent 0 7px, #6239190a 8px, transparent 9px 17px, #f8d8a20b 18px, transparent 20px 31px),
+    repeating-linear-gradient(0deg, transparent 0 64px, #51301b1a 65px, #f7cf9b24 66px, transparent 68px 132px),
+    linear-gradient(90deg, #69402014, transparent 14% 82%, #6940201c),
     linear-gradient(100deg, #ab8257, #bf9565 50%, #ad8151);
-  box-shadow: inset 0 2px 0 #efd1a1, inset 0 -2px 0 #7a5230, 0 7px 0 -3px #0a3351, 0 16px 32px #082a4933;
+  box-shadow: inset 0 2px 0 #f1d7ae, inset 2px 0 0 #e0b98460, inset -2px 0 0 #6c45272e, inset 0 -2px 0 #7a5230, 0 7px 0 -3px #0a3351, 0 16px 32px #082a4933;
 }
 
 .deckHeading {
   margin: 0 0 14px;
   color: #fff9ed;
-  font-size: 22.05px;
+  font-size: 24.255px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.25px;
@@ -228,7 +231,7 @@
   min-width: 0;
   margin: 0;
   color: #3c2f24;
-  font-size: 14.7px;
+  font-size: 16.17px;
   font-weight: 400;
   line-height: 1.7;
   letter-spacing: 0.15px;
@@ -242,7 +245,7 @@
 .location {
   margin: 2px 0 0;
   color: #80694e;
-  font-size: 8.4px;
+  font-size: 9.24px;
   line-height: 1.6;
 }
 
@@ -261,7 +264,7 @@
 .jobRole {
   margin: 0 0 5px;
   color: #493722;
-  font-size: 11.55px;
+  font-size: 12.705px;
   font-weight: 400;
   line-height: 1.55;
 }
@@ -269,13 +272,13 @@
 .summary {
   margin: 0;
   color: #746047;
-  font-size: 10.5px;
+  font-size: 11.55px;
   line-height: 1.8;
 }
 
 .dates {
   color: #80694e;
-  font-size: 10.5px;
+  font-size: 11.55px;
   font-weight: 400;
   line-height: 1.5;
   text-align: right;
@@ -301,17 +304,17 @@
   }
 
   .name {
-    font-size: clamp(16.8px, 2.31vw, 23.1px);
+    font-size: clamp(18.48px, 2.541vw, 25.41px);
   }
 
   .school,
   .degree {
-    font-size: clamp(7.875px, 0.997vw, 9.45px);
+    font-size: clamp(8.663px, 1.097vw, 10.395px);
   }
 
   .graduation {
     margin-top: 4px;
-    font-size: 7.875px;
+    font-size: 8.663px;
   }
 
   .academic {
@@ -356,11 +359,11 @@
   }
 
   .name {
-    font-size: 24.15px;
+    font-size: 26.565px;
   }
 
   .school {
-    font-size: 10.5px;
+    font-size: 11.55px;
   }
 
   .academic {
@@ -376,13 +379,13 @@
   }
 
   .degree {
-    font-size: 9.45px;
+    font-size: 10.395px;
     line-height: 1.6;
   }
 
   .graduation {
     margin-top: 4px;
-    font-size: 8.4px;
+    font-size: 9.24px;
   }
 
   .links {
@@ -410,7 +413,7 @@
   }
 
   .company {
-    font-size: 12.6px;
+    font-size: 13.86px;
   }
 
   .work {
@@ -421,7 +424,7 @@
   .dates {
     grid-column: 1;
     grid-row: 2;
-    font-size: 9.45px;
+    font-size: 10.395px;
     text-align: left;
   }
 }
@@ -429,6 +432,7 @@
 @media (min-width: 541px) and (max-width: 760px) {
   .banner {
     min-height: 128px;
+    padding-block: 11px;
   }
 
   .links {
@@ -470,21 +474,21 @@
   }
 
   .name {
-    font-size: clamp(21px, 5.775vw, 27.3px);
+    font-size: clamp(23.1px, 6.353vw, 30.03px);
   }
 
   .school {
     margin-top: 4px;
-    font-size: 8.4px;
+    font-size: 9.24px;
   }
 
   .degree {
-    font-size: 9.45px;
+    font-size: 10.395px;
   }
 
   .graduation {
     margin-top: 5px;
-    font-size: 8.4px;
+    font-size: 9.24px;
   }
 
   .academic > svg {
@@ -517,7 +521,7 @@
 
   .deckHeading {
     margin-bottom: 14px;
-    font-size: 18.9px;
+    font-size: 20.79px;
   }
 
   .entries {
@@ -537,7 +541,7 @@
   }
 
   .company {
-    font-size: 11.55px;
+    font-size: 12.705px;
     line-height: 1.6;
   }
 
@@ -550,7 +554,7 @@
   .dates {
     grid-column: 2;
     grid-row: 1;
-    font-size: 8.4px;
+    font-size: 9.24px;
     text-align: right;
   }
 
@@ -561,11 +565,11 @@
 
   .jobRole {
     margin-bottom: 4px;
-    font-size: 10.5px;
+    font-size: 11.55px;
   }
 
   .summary {
-    font-size: 10.5px;
+    font-size: 11.55px;
     line-height: 1.7;
   }
 }
@@ -588,19 +592,19 @@
   }
 
   .name {
-    font-size: 21px;
+    font-size: 23.1px;
   }
 
   .school {
-    font-size: 7.875px;
+    font-size: 8.663px;
   }
 
   .degree {
-    font-size: 8.4px;
+    font-size: 9.24px;
   }
 
   .graduation {
-    font-size: 7.875px;
+    font-size: 8.663px;
   }
 
   .academic > svg {
@@ -625,11 +629,11 @@
   }
 
   .company {
-    font-size: 10.5px;
+    font-size: 11.55px;
   }
 
   .dates {
-    font-size: 7.875px;
+    font-size: 8.663px;
   }
 }
 
@@ -645,7 +649,7 @@
   }
 
   .name {
-    font-size: 24.15px;
+    font-size: 26.565px;
   }
 
   .deck {
@@ -654,7 +658,7 @@
 
   .deckHeading {
     margin-bottom: 10px;
-    font-size: 18.9px;
+    font-size: 20.79px;
   }
 
   .entry {
@@ -662,11 +666,11 @@
   }
 
   .jobRole {
-    font-size: 10.5px;
+    font-size: 11.55px;
   }
 
   .summary {
-    font-size: 9.45px;
+    font-size: 10.395px;
     line-height: 1.7;
   }
 }
