@@ -457,13 +457,15 @@
   }
 
   .links {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 48px);
+    justify-content: space-between;
     gap: 10px;
   }
 
   .link {
-    width: 100%;
+    width: 48px;
     height: 48px;
+    aspect-ratio: 1;
     padding: 9px;
   }
 
@@ -571,12 +573,19 @@
   }
 
   .links {
+    grid-template-columns: repeat(4, 44px);
     gap: 8px;
   }
 
   .link {
+    width: 44px;
     height: 44px;
     padding: 8px;
+  }
+
+  .link svg {
+    width: 26px;
+    height: 26px;
   }
 
   .company {
