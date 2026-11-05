@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 
 const experience: {
   company: string;
+  location: string;
   logo: string;
   summary: string;
   start: string;
@@ -13,6 +14,7 @@ const experience: {
 }[] = [
   {
     company: "Rippling",
+    location: "San Francisco, CA",
     logo: "/images/companies/rippling.svg",
     summary: "Payroll infrastructure and distributed workflow engines.",
     start: "2027-01",
@@ -20,6 +22,7 @@ const experience: {
   },
   {
     company: "Faire",
+    location: "Toronto, ON",
     logo: "/images/companies/faire.png",
     summary: "Event streaming, real-time telemetry, and compute infrastructure.",
     start: "2026-05",
@@ -27,6 +30,7 @@ const experience: {
   },
   {
     company: "AlphaSense",
+    location: "New York, NY",
     logo: "/images/companies/alphasense.png",
     summary: "SQL compilers, data pipelines, and internal developer tools.",
     start: "2025-09",
@@ -34,6 +38,7 @@ const experience: {
   },
   {
     company: "Government of Canada",
+    location: "Toronto, ON",
     logo: "/images/companies/canada.svg",
     summary: "Internal AI tools and production machine learning pipelines.",
     start: "2025-01",
@@ -93,7 +98,10 @@ export default function Home() {
               <article className={styles.entry} key={job.company}>
                 <div className={styles.employer}>
                   <img className={styles.companyLogo} src={assetPath(job.logo)} width="30" height="30" alt="" />
-                  <h3 className={styles.company}>{job.company}</h3>
+                  <div className={styles.employerDetails}>
+                    <h3 className={styles.company}>{job.company}</h3>
+                    <p className={styles.location}>{job.location}</p>
+                  </div>
                 </div>
                 <div className={styles.work}>
                   <p className={styles.jobRole}>Software Engineering Intern</p>
